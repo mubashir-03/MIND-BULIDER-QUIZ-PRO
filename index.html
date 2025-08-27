@@ -363,8 +363,8 @@
         }
 
         .circular-image {
-            width: 320px;
-            height: 320px;
+            width: 300px;
+            height: 300px;
             border-radius: 50%;
             object-fit: cover;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
@@ -640,8 +640,8 @@
                         if (!q.question || !q.options || !q.answer) {
                             throw new Error(`Question ${index + 1} is missing required fields (question, options, or answer).`);
                         }
-                        if (q.options.length !== 4) {
-                            throw new Error(`Question ${index + 1} must have exactly 4 options.`);
+                        if (q.options.length !== 3) {
+                            throw new Error(`Question ${index + 1} must have exactly 3 options.`);
                         }
                         if (!q.options.includes(q.answer)) {
                             throw new Error(`Question ${index + 1} has an answer that is not in the options.`);
@@ -670,8 +670,8 @@ loadQuestionsBtn.addEventListener('click', function() {
             if (!q.question || !q.options || !q.answer) {
                 throw new Error(`Question ${index + 1} is missing required fields (question, options, or answer).`);
             }
-            if (q.options.length !== 4) {
-                throw new Error(`Question ${index + 1} must have exactly 4 options.`);
+            if (q.options.length !== 3) {
+                throw new Error(`Question ${index + 1} must have exactly 3 options.`);
             }
             if (!q.options.includes(q.answer)) {
                 throw new Error(`Question ${index + 1} has an answer that is not in the options.`);
